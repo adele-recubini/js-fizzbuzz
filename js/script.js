@@ -6,19 +6,31 @@
 
 // la variabile lista numeri si popola con il ciclo for partendo dalla variabile lista che è uguale a 0
 
-var listaNumeri = [];
-var lista = 0;
+// non aveva senso inserire un array vuoto perche gia il ciclo for conteneva le istruzioni per incrementare i numeri con la i
+
+// var listaNumeri = [];
+// var lista = 0;
 
 
-for (var i = 0; i < 100; i++) {
-  lista += listaNumeri[i];
+for (var i = 1; i < 100; i++) {
+  // listaNumeri.push(i);
+  // il ciclo for mi dice che partendo da uno ogni ciclo deve incrementare di uno fino a 100 quindi posso considerare la mia i come un numero che ogni volta si va incrementando
+
+if ( i % 5 === 0 && i % 3 === 0) {
+  console.log('FizzBuzz');
 }
- if ( listaNumeri[i] % 3 === 0  ) {
+
+else if (i % 5 === 0 ) {
+  console.log('Buzz');
+}
+
+else if (i % 3 === 0) {
   console.log('Fizz');
 }
-else if (listaNumeri[i] % 5 === 0 ) {
-  console.log('Buzz')
-}
- else (listaNumeri[i] % 5 === 0 && listaNumeri[i] % 3 === 0) {
-  console.log('FizzBuzz');
+
+ else {
+   console.log(i);
  }
+
+}
+// l ultima istruzione else dice che se non è divisibile per 3 o per 5 o per entrambe  stampa direttamente il numero
